@@ -1,0 +1,199 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap");
+
+@import "/assets/styles/hero.css";
+@import "/assets/styles/techincal-spec.css";
+
+:root {
+  /* fonts */
+  --font-thin: 100;
+  --font-extra-light: 200;
+  --font-light: 300;
+  --font-regular: 400;
+  --font-medium: 500;
+  --font-semibold: 600;
+  --font-bold: 700;
+  --font-extra-bold: 800;
+  --font-black: 900;
+
+  /* colors */
+  --primary: #007bff;
+  --secondary: #2b3990;
+  --success: #28a745;
+  --danger: #dc3545;
+  --warning: #ffc107;
+  --info: #17a2b8;
+  --light: #f8f9fa;
+  --dark: #343a40;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Inter", sans-serif !important;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+}
+
+a {
+  text-decoration: none;
+  color: #262a2e;
+  font-weight: 500 !important;
+  font-size: 14px;
+  padding: 8px 12px;
+}
+
+/* button */
+.button {
+  /* background-color: var(--secondary); */
+  border: none;
+  cursor: pointer;
+  padding: 12px 16px;
+  gap: 4px;
+  /* width: 107px; */
+  height: 44px;
+  font-weight: var(--font-medium) !important;
+  border-radius: 10px;
+  background: transparent;
+
+  display: flex;
+  align-items: center;
+}
+
+/* button varients */
+.button-primary {
+  background: var(--secondary);
+  color: #ffffff;
+  font-weight: var(--font-medium);
+}
+
+.button-secondary {
+  background: transparent;
+  color: #262a2e;
+  border: 1px solid var(--secondary);
+  font-weight: var(--font-medium);
+}
+
+.button-outline {
+  background: transparent;
+  color: #ffff;
+  border: 1px solid #fff;
+  font-weight: var(--font-medium);
+}
+
+/* container */
+.container {
+  max-width: 1240px;
+  margin: 0 auto;
+  /* pad  ding: 100px; */
+}
+
+.section-primary {
+  height: auto;
+  position: relative;
+  padding: 100px;
+}
+
+.section-primary::after {
+  content: "";
+  background: url("../images/background-img.png") no-repeat center center/cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.2;
+  z-index: -1;
+}
+
+.section-secondary {
+  height: auto;
+  position: relative;
+  padding: 100px;
+}
+
+.section-header {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.section-header h2 {
+  font-family: "Urbanist", sans-serif;
+  font-size: 48px;
+  font-weight: var(--font-bold);
+  line-height: 1.08;
+  letter-spacing: -0.02em;
+}
+
+.section-header p {
+  font-size: 18px;
+}
+.section-header {
+}
+/* Responsive container padding */
+@media (max-width: 1600px) {
+  .container,
+  .section {
+    /* padding: 100px; */
+  }
+}
+
+@media (max-width: 1440px) {
+  .container,
+  .section {
+    /* padding: 100px; */
+  }
+}
+
+@media (max-width: 1200px) {
+  .container,
+  .section {
+    /* padding: 80px; */
+  }
+}
+
+@media (max-width: 1080px) {
+  .container,
+  .section {
+    /* padding: 80px 60px; */
+  }
+}
+
+@media (max-width: 800px) {
+  .container,
+  .section {
+    padding: 80px 48px;
+  }
+}
+
+@media (max-width: 360px) {
+  .container,
+  .section {
+    padding: 48px 16px;
+  }
+}
+.shadow-xs {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.shadow-sm {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.shadow-md {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.shadow-lg {
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.2);
+}
