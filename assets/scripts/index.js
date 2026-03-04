@@ -278,6 +278,10 @@
     mainImageWrap.classList.remove("is-zooming");
   };
 
+  const isOverNavButton = (event) => {
+    return Boolean(event?.target?.closest(".nav-btn"));
+  };
+
   renderThumbnails();
   setActiveSlide(0, 1, true);
 
@@ -294,15 +298,31 @@
   });
 
   mainImageWrap.addEventListener("mouseenter", (event) => {
+    if (isOverNavButton(event)) {
+      hidePreview();
+      return;
+    }
     showPreview(slides[activeIndex].src);
     setZoomPosition(event, mainImageWrap, true);
   });
 
   mainImageWrap.addEventListener("mousemove", (event) => {
+    if (isOverNavButton(event)) {
+      hidePreview();
+      return;
+    }
+    showPreview(slides[activeIndex].src);
     setZoomPosition(event, mainImageWrap, true);
   });
 
   mainImageWrap.addEventListener("mouseleave", () => {
     hidePreview();
   });
+
+  const disablePreviewOnNavHover = (button) => {
+    button.addEventListener("mouseenter", hidePreview);
+  };
+
+  disablePreviewOnNavHover(prevButton);
+  disablePreviewOnNavHover(nextButton);
 })();
