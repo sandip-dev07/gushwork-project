@@ -55,3 +55,52 @@
   window.addEventListener("resize", updateDynamicHeader);
   updateDynamicHeader();
 })();
+
+(function () {
+  const faqItems = document.querySelectorAll(".faq-item");
+
+  if (!faqItems.length) return;
+
+  faqItems.forEach((item) => {
+    item.addEventListener("toggle", () => {
+      if (!item.open) return;
+
+      faqItems.forEach((other) => {
+        if (other !== item) {
+          other.open = false;
+        }
+      });
+    });
+  });
+})();
+
+(function () {
+  const initHorizontalCarousel = (trackSelector, buttonSelector, cardSelector) => {
+    const track = document.querySelector(trackSelector);
+    const buttons = document.querySelectorAll(buttonSelector);
+
+    if (!track || !buttons.length) return;
+
+    const getScrollStep = () => {
+      const firstCard = track.querySelector(cardSelector);
+      if (!firstCard) return Math.max(280, Math.round(window.innerWidth * 0.28));
+
+      const styles = getComputedStyle(track);
+      const gap = Number.parseFloat(styles.columnGap || styles.gap || "0");
+      return Math.round(firstCard.getBoundingClientRect().width + gap);
+    };
+
+    buttons.forEach((button) => {
+      button.addEventListener("click", () => {
+        const direction = button.dataset.direction === "left" ? -1 : 1;
+        track.scrollBy({
+          left: direction * getScrollStep(),
+          behavior: "smooth",
+        });
+      });
+    });
+  };
+
+  initHorizontalCarousel(".applications-cards", ".applications-arrow", ".application-card");
+  initHorizontalCarousel(".testimonial-cards", ".testimonial-arrow", ".testimonial-card");
+})();

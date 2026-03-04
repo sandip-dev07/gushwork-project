@@ -1,8 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap");
 
-@import "/assets/styles/hero.css";
-@import "/assets/styles/techincal-spec.css";
+@import "hero.css";
+@import "techincal-spec.css";
+@import "platform.css";
+@import "faq.css";
+@import "application.css";
+@import "manufacture.css";
+@import "testimonial.css";
+@import "solution.css";
+@import "resources.css";
+@import "cta.css";
+@import "footer.css";
 
 :root {
   /* fonts */
@@ -18,7 +27,7 @@
 
   /* colors */
   --primary: #007bff;
-  --secondary: #2b3990;
+  --secondary: #2B3990;
   --success: #28a745;
   --danger: #dc3545;
   --warning: #ffc107;
@@ -101,6 +110,7 @@ a {
   height: auto;
   position: relative;
   padding: 100px;
+  border-bottom: 1px solid #CFD1D4;
 }
 
 .section-primary::after {
@@ -137,6 +147,8 @@ a {
 
 .section-header p {
   font-size: 18px;
+  color: #4D545C;
+  line-height: 1.5;
 }
 .section-header {
 }

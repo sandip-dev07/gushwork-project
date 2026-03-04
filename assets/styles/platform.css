@@ -1,0 +1,132 @@
+.platform-section {
+  padding-top: 40px;
+  padding-bottom: 100px;
+}
+
+.platform-wrap {
+  max-width: 1040px;
+}
+
+.platform-header {
+  max-width: 880px;
+  gap: 16px;
+}
+
+.platform-header h2 {
+  color: #0d0d0d;
+  font-family: "Urbanist", sans-serif;
+  font-size: clamp(2rem, 4vw, 3.25rem);
+  font-weight: var(--font-bold);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+.platform-header p {
+  color: #4b5563;
+  max-width: 760px;
+  font-size: clamp(1rem, 1.35vw, 1.5rem);
+  line-height: 1.55;
+}
+
+.platform-cards-grid {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.platform-card {
+  background: #ffffff;
+  border: 1px solid #d1d5db;
+  border-radius: 14px;
+  padding: 20px;
+  min-height: 220px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.platform-card-icon {
+  width: 24px;
+  height: 24px;
+  color: #2b3990;
+}
+
+.platform-card h3 {
+  font-size: 20px;
+  font-weight: var(--font-semibold);
+  line-height: 1.35;
+  color: #0d0d0d;
+}
+
+.platform-card p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #535a61;
+}
+
+.platform-cta {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+}
+
+.platform-cta .button {
+  min-width: 124px;
+  justify-content: center;
+}
+
+@media (max-width: 1200px) {
+  .platform-section {
+    padding: 30px 56px 90px;
+  }
+
+  .platform-card {
+    min-height: 244px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .platform-cards-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 800px) {
+  .platform-section {
+    padding: 20px 24px 72px;
+  }
+
+  .platform-header h2 {
+    font-size: 2rem;
+  }
+
+  .platform-header p {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  .platform-cards-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .platform-card {
+    min-height: auto;
+    padding: 16px;
+  }
+
+  .platform-card h3 {
+    font-size: 1.3rem;
+  }
+
+  .platform-card p {
+    font-size: 0.98rem;
+    line-height: 1.6;
+  }
+
+  .platform-cta .button {
+    width: 100%;
+    max-width: 340px;
+  }
+}
