@@ -53,27 +53,30 @@
           <!-- Left side - Image Gallery -->
           <div class="hero-gallery">
             <!-- Main Product Image -->
-            <div class="main-image shadow-md">
-              <img src="assets/images/hero.jpg" alt="Product Image" />
+            <div class="main-image shadow-md" aria-label="Product image viewer">
+              <div class="main-image-stage">
+                <img class="main-product-image is-current" src="assets/images/hero.jpg" alt="Product Image" />
+              </div>
+              <div class="zoom-lens" aria-hidden="true">
+                <span class="zoom-lens-icon">+</span>
+              </div>
               <div class="image-nav">
-                <button class="nav-btn prev">
+                <button class="nav-btn prev" type="button" aria-label="Previous image">
                   <img src="/assets/icons/ArrowLeft.svg" alt="" />
                 </button>
-                <button class="nav-btn next">
+                <button class="nav-btn next" type="button" aria-label="Next image">
                   <img src="/assets/icons/ArrowRight.svg" alt="" />
                 </button>
               </div>
             </div>
 
             <!-- Thumbnail Gallery -->
-            <div class="thumbnail-gallery">
-              <div class="thumbnail active shadow-sm"></div>
-              <div class="thumbnail shadow-sm"></div>
-              <div class="thumbnail shadow-sm"></div>
-              <div class="thumbnail shadow-sm"></div>
-              <div class="thumbnail shadow-sm"></div>
-              <div class="thumbnail shadow-sm"></div>
-            </div>
+            <div class="thumbnail-gallery" aria-label="Product image thumbnails"></div>
+
+            <!-- Zoom Preview -->
+            <aside class="zoom-preview shadow-md" aria-hidden="true">
+              <div class="zoom-preview-image"></div>
+            </aside>
           </div>
 
           <!-- Right side - Product Details -->
@@ -181,7 +184,7 @@
       <div class="container technical-specs">
         <div class="section-header">
           <h2>Technical Specifications at a Glance</h2>
-          <p>
+          <p style="color: #FFFFFFCC;">
             Comprehensive performance data demonstrating our commitment to
             quality and engineering excellence.
           </p>
@@ -269,11 +272,7 @@
         <div class="platform-cards-grid">
           <article class="platform-card">
             <span class="platform-card-icon" aria-hidden="true">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M3 9H21V19H3V9Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" />
-                <path d="M8 9V7C8 5.89543 8.89543 5 10 5H14C15.1046 5 16 5.89543 16 7V9" stroke="currentColor"
-                  stroke-width="1.8" stroke-linecap="round" />
-              </svg>
+              <img src="/assets/icons/bag.svg" alt="">
             </span>
             <h3>Superior Chemical Resistance</h3>
             <p>
@@ -286,11 +285,7 @@
 
           <article class="platform-card">
             <span class="platform-card-icon" aria-hidden="true">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M4 20L9.5 14.5M13.5 10.5L19 5M14 4.5L19.5 10L16.5 13L11 7.5L14 4.5ZM4.5 19.5L8 16L10.5 18.5L7 22L4.5 19.5Z"
-                  stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" />
-              </svg>
+              <img src="/assets/icons/needle.svg" alt="">
             </span>
             <h3>Exceptional Flexibility &amp; Durability</h3>
             <p>
@@ -303,12 +298,7 @@
 
           <article class="platform-card">
             <span class="platform-card-icon" aria-hidden="true">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M12 3L19 7V17L12 21L5 17V7L12 3Z" stroke="currentColor" stroke-width="1.8"
-                  stroke-linejoin="round" />
-                <path d="M12 3V11M19 7L12 11L5 7M12 11V21" stroke="currentColor" stroke-width="1.8"
-                  stroke-linecap="round" stroke-linejoin="round" />
-              </svg>
+              <img src="/assets/icons/package.svg" alt="">
             </span>
             <h3>Leak-Proof Fusion Welding</h3>
             <p>
@@ -321,11 +311,7 @@
 
           <article class="platform-card">
             <span class="platform-card-icon" aria-hidden="true">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M12 7.5A4.5 4.5 0 1 0 12 16.5A4.5 4.5 0 1 0 12 7.5Z M12 3V5 M12 19V21 M4.93 4.93L6.34 6.34 M17.66 17.66L19.07 19.07 M3 12H5 M19 12H21 M4.93 19.07L6.34 17.66 M17.66 6.34L19.07 4.93"
-                  stroke="currentColor" stroke-width="1.7" stroke-linecap="round" />
-              </svg>
+              <img src="/assets/icons/gear.svg" alt="">
             </span>
             <h3>Cost-Effective Long-Term Solution</h3>
             <p>
@@ -338,11 +324,7 @@
 
           <article class="platform-card">
             <span class="platform-card-icon" aria-hidden="true">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M12 7.5A4.5 4.5 0 1 0 12 16.5A4.5 4.5 0 1 0 12 7.5Z M12 3V5 M12 19V21 M4.93 4.93L6.34 6.34 M17.66 17.66L19.07 19.07 M3 12H5 M19 12H21 M4.93 19.07L6.34 17.66 M17.66 6.34L19.07 4.93"
-                  stroke="currentColor" stroke-width="1.7" stroke-linecap="round" />
-              </svg>
+              <img src="/assets/icons/gear.svg" alt="">
             </span>
             <h3>Environmentally Sustainable</h3>
             <p>
@@ -355,11 +337,7 @@
 
           <article class="platform-card">
             <span class="platform-card-icon" aria-hidden="true">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M12 7.5A4.5 4.5 0 1 0 12 16.5A4.5 4.5 0 1 0 12 7.5Z M12 3V5 M12 19V21 M4.93 4.93L6.34 6.34 M17.66 17.66L19.07 19.07 M3 12H5 M19 12H21 M4.93 19.07L6.34 17.66 M17.66 6.34L19.07 4.93"
-                  stroke="currentColor" stroke-width="1.7" stroke-linecap="round" />
-              </svg>
+              <img src="/assets/icons/gear.svg" alt="">
             </span>
             <h3>Certified Quality Assurance</h3>
             <p>
@@ -380,8 +358,8 @@
     <!-- faq section -->
     <section class="section-primary faq-section">
       <div class="container faq-wrap">
-        <div class="faq-header">
-          <h2><span>Frequently</span> Asked Questions</h2>
+        <div class="section-header">
+          <h2><span style="color: var(--secondary);">Frequently</span> Asked Questions</h2>
         </div>
 
         <div class="faq-list">
@@ -463,7 +441,7 @@
     <section class="section-primary applications-section">
       <div class="container applications-wrap">
         <div class="applications-head">
-          <div class="applications-copy">
+          <div class="section-header applications-copy">
             <h2>Versatile Applications Across Industries</h2>
             <p>
               From technical textiles to packaging materials, our precision-engineered
@@ -473,11 +451,11 @@
           <div class="applications-arrows">
             <button class="applications-arrow" type="button" aria-label="Scroll applications left"
               data-direction="left">
-              <span>&larr;</span>
+              <img src="/assets/icons/ArrowLeft.svg" alt="" />
             </button>
             <button class="applications-arrow" type="button" aria-label="Scroll applications right"
               data-direction="right">
-              <span>&rarr;</span>
+              <img src="/assets/icons/ArrowRight.svg" alt="" />
             </button>
           </div>
         </div>
@@ -548,7 +526,7 @@
     <!-- Manufacture Process section -->
     <section class="section-primary manufacture-section">
       <div class="container manufacture-wrap">
-        <div class="manufacture-header">
+        <div class="section-header manufacture-header">
           <h2>Advanced HDPE Pipe Manufacturing Process</h2>
           <p>
             Our state-of-the-art extrusion technology ensures consistent quality,
@@ -579,10 +557,10 @@
               </p>
               <ul class="manufacture-points">
                 <li>
-                  <span class="dot-check" aria-hidden="true"></span>PE100 grade material
+                  <span><img src="/assets/icons/CheckCircle.svg" /></span>PE100 grade material
                 </li>
                 <li>
-                  <span class="dot-check" aria-hidden="true"></span>Optimal molecular weight distribution
+                  <span><img src="/assets/icons/CheckCircle.svg" /></span>Optimal molecular weight distribution
                 </li>
               </ul>
             </div>
@@ -784,12 +762,7 @@
             <span>HDPE Pipe Installation Manual (PDF)</span>
             <span class="resource-action">
               <span>Download PDF</span>
-              <span class="resource-download-icon" aria-hidden="true">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M12 4V14M12 14L8 10M12 14L16 10M5 18H19" stroke="currentColor" stroke-width="1.8"
-                    stroke-linecap="round" stroke-linejoin="round" />
-                </svg>
-              </span>
+              <img style="width: 16px;" src="/assets/icons/download.svg" alt="">
             </span>
           </a>
 
@@ -797,12 +770,7 @@
             <span>Maintenance &amp; Inspection Handbook (PDF)</span>
             <span class="resource-action">
               <span>Download PDF</span>
-              <span class="resource-download-icon" aria-hidden="true">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M12 4V14M12 14L8 10M12 14L16 10M5 18H19" stroke="currentColor" stroke-width="1.8"
-                    stroke-linecap="round" stroke-linejoin="round" />
-                </svg>
-              </span>
+              <img style="width: 16px;" src="/assets/icons/download.svg" alt="">
             </span>
           </a>
 
@@ -810,12 +778,7 @@
             <span>Engineering Specifications Sheet (PDF)</span>
             <span class="resource-action">
               <span>Download PDF</span>
-              <span class="resource-download-icon" aria-hidden="true">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M12 4V14M12 14L8 10M12 14L16 10M5 18H19" stroke="currentColor" stroke-width="1.8"
-                    stroke-linecap="round" stroke-linejoin="round" />
-                </svg>
-              </span>
+              <img style="width: 16px;" src="/assets/icons/download.svg" alt="">
             </span>
           </a>
         </div>
@@ -898,50 +861,33 @@
             <h4>Contact</h4>
             <p>
               <span aria-hidden="true">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M12 22C16 16.5 19 13.7 19 10.5C19 6.91015 15.866 4 12 4C8.13401 4 5 6.91015 5 10.5C5 13.7 8 16.5 12 22Z"
-                    stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" />
-                  <circle cx="12" cy="10.5" r="2.5" stroke="currentColor" stroke-width="1.7" />
-                </svg>
+                <img src="/assets/icons/location.svg" alt="">
               </span>
               2126, Road No. 2, GIDC Sachin, Surat - 394 230 Gujarat, India
             </p>
             <a href="tel:+91XXXXXX">
               <span aria-hidden="true">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M20 16.8V19C20 19.5523 19.5523 20 19 20H17.8C11.283 20 6 14.717 6 8.2V7C6 6.44772 6.44772 6 7 6H9.2C9.75228 6 10.2 6.44772 10.2 7V9.4L8.9 10.7C9.475 12.489 10.911 13.925 12.7 14.5L14 13.2H16.4C16.9523 13.2 17.4 13.6477 17.4 14.2V16.8C17.4 17.3523 17.8477 17.8 18.4 17.8H19C19.5523 17.8 20 17.3523 20 16.8Z"
-                    stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" />
-                </svg>
+                <img src="/assets/icons/call.svg" alt="">
               </span>
               +91-XXX-XXX-XXXX
             </a>
             <a href="mailto:info@meeraind.com">
-              <span aria-hidden="true">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <rect x="4" y="6" width="16" height="12" rx="2" stroke="currentColor" stroke-width="1.7" />
-                  <path d="M5 8L12 13L19 8" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"
-                    stroke-linejoin="round" />
-                </svg>
+              <span aria-hidden="true" style="margin-top: 4px;">
+                <img src="/assets/icons/mail.svg" alt="">
               </span>
               info@meeraind.com
             </a>
             <a href="mailto:support@meeraind.com">
               <span aria-hidden="true">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <circle cx="12" cy="12" r="8" stroke="currentColor" stroke-width="1.7" />
-                  <path d="M8.5 11.5H15.5M8.5 14.5H12.5" stroke="currentColor" stroke-width="1.7"
-                    stroke-linecap="round" />
-                </svg>
+                <img src="/assets/icons/support.svg" alt="">
               </span>
               support@meeraind.com
             </a>
 
             <div class="footer-social">
-              <a href="#" aria-label="LinkedIn">in</a>
-              <a href="#" aria-label="X">x</a>
-              <a href="#" aria-label="Instagram">ig</a>
+              <img src="/assets/icons//linkedin.svg" alt="">
+              <img src="/assets/icons/twitter.svg" alt="">
+              <img src="/assets/icons/insta.svg" alt="">
             </div>
           </div>
         </div>

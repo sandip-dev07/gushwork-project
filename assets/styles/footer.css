@@ -1,7 +1,8 @@
 .site-footer {
   height: auto;
   position: relative;
-  padding: 100px;
+  padding: 80px;
+  padding-bottom: 0px;
 }
 
 .site-footer::after {
@@ -113,6 +114,7 @@
 }
 
 .footer-bottom {
+  margin-top: 45px;
   border-top: 1px solid #d1d5db;
   padding: 10px 0;
 }
