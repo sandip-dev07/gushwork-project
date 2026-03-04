@@ -1,3 +1,4 @@
+// dynamic header
 (function () {
   const mainHeader = document.querySelector(".header");
   const dynamicHeader = document.querySelector(".dynamic-header");
@@ -56,6 +57,7 @@
   updateDynamicHeader();
 })();
 
+// FAQ
 (function () {
   const faqItems = document.querySelectorAll(".faq-item");
 
@@ -74,6 +76,7 @@
   });
 })();
 
+// horizontal carousels
 (function () {
   const initHorizontalCarousel = (trackSelector, buttonSelector, cardSelector) => {
     const track = document.querySelector(trackSelector);
@@ -105,6 +108,7 @@
   initHorizontalCarousel(".testimonial-cards", ".testimonial-arrow", ".testimonial-card");
 })();
 
+// image gallery
 (function () {
   const gallery = document.querySelector(".hero-gallery");
   const mainImageWrap = gallery?.querySelector(".main-image");
