@@ -259,6 +259,27 @@ a {
   }
 }
 
+@media (max-width: 480px) {
+  :root {
+    --container-padding: 20px;
+  }
+
+  .section-primary,
+  .section-secondary,
+  .platform-section,
+  .faq-section,
+  .applications-section,
+  .manufacture-section,
+  .testimonial-section,
+  .solutions-section,
+  .resources-section,
+  .cta-section,
+  .site-footer {
+    padding-top: 64px !important;
+    padding-bottom: 64px !important;
+  }
+}
+
 @media (max-width: 360px) {
   :root {
     --container-padding: 14px;
