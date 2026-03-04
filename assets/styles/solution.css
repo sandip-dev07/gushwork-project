@@ -140,11 +140,14 @@
   }
 
   .solutions-expert {
+    margin-top: 40px;
     flex-direction: column;
     align-items: flex-start;
+    gap: 14px;
   }
 
   .solutions-expert-btn {
+    margin-top: 6px;
     width: 100%;
   }
 }
